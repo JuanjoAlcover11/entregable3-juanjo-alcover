@@ -16,12 +16,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScaleToDirection(KeyCode.W, Vector3.right);
-        ScaleToDirection(KeyCode.W, Vector3.up);
-        ScaleToDirection(KeyCode.W, Vector3.forward);
+        ScaleToDirection(KeyCode.W, Vector3.one);
 
-        RotationToDirection(KeyCode.R, axis: new Vector3(x: 45, 0, 0));
-        RotationToDirection(KeyCode.R, axis: new Vector3(x: 0, 0, 45));
+        RotationToDirection(KeyCode.R, axis: new Vector3(x: 45, 0, 45));
 
     }
     public void ScaleToDirection(KeyCode key, Vector3 axis)
